@@ -1,0 +1,50 @@
+/* ------------------------- */
+/* Project  : Run Buddy      */
+/* Author   : Vicente Garcia */
+/* Date     : 02/03/2022     */
+/* Modified : 02/04/2022     */
+/* ------------------------- */
+*{
+    /* Apply margin to whole page */
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* Apply style to body */
+    color: #39a6b2;
+    font-family: Helvetica, Arial, sans-serif;
+    /*background-color: tomato;*/
+}
+header{
+    /* Apply style to header */
+    padding: 20px 35px;
+    background-color: #39a6b2;
+}
+header h1{
+    /* Apply style to h1 in header */
+    font-weight: bold;
+    font-size: 36px;
+    color: #fce138;
+    margin: 0;
+    display: inline;
+}
+header a{
+    /* Apply style to anchors */
+    text-decoration: none;
+    color: #fce138;
+}
+header nav{
+    /* Apply style to navigation */
+    float: right;
+    margin: 7px 0;
+}
+header nav ul li{
+    /* Apply alignment to header's elements */
+    display: inline;
+}
+header nav ul li a{
+    /* Apply style to navigation's elements */
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
