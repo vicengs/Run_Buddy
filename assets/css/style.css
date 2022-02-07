@@ -69,6 +69,65 @@ footer div{
     text-align: right;
 }
 footer a{
-    /*  */
+    /* Apply color to anchors in footer */
     color: #024e76;
+}
+section{
+    /* Apply padding to sections */
+    padding: 60px;
+    
+}
+.hero{
+    /* Add background image to hero */
+    background-image: url("../images/hero-bg.jpg");
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.hero-form{
+    /* Add style to form */
+    color: #024e76;
+    background-color: #fce138;
+    padding: 20px;
+    width: 500px;
+    /* Add style to margin */
+    border-style: solid;
+    border-width: 3px;
+    border-color: #024e76;
+    /* Position of the form */
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+}
+.hero-form h3{
+    /* Add style to title in form */
+    font-size: 24px;
+    margin: 0;
+}
+.hero-form p{
+    /* Add margin to elements in the form */
+    margin: 5px 0 15px 0;
+}
+.form-input{
+    /* Add style to form */
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.hero-form label{
+    /* Add margins to labels */
+    margin: 0 5px;
+}
+.hero-form button{
+    /* Add style to button */
+    color: #fce138;
+    background-color: #024e76;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
 }
