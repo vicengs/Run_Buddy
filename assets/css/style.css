@@ -8,20 +8,21 @@
     /* Apply margin to whole page */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    /* Apply style to body */
+    /* Apply font and color to body */
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
     /*background-color: tomato;*/
 }
 header{
-    /* Apply style to header */
+    /* Apply space and background color to header */
     padding: 20px 35px;
     background-color: #39a6b2;
 }
 header h1{
-    /* Apply style to h1 in header */
+    /* Apply font, color and alignment to h1 in header */
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
@@ -29,7 +30,7 @@ header h1{
     display: inline;
 }
 header a{
-    /* Apply style to anchors */
+    /* Apply shape and color to anchors */
     text-decoration: none;
     color: #fce138;
 }
@@ -43,8 +44,31 @@ header nav ul li{
     display: inline;
 }
 header nav ul li a{
-    /* Apply style to navigation's elements */
+    /* Apply space and shape font to navigation's elements */
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
+}
+footer{
+    /* Apply background color and alignment to footer */
+    background: #fce138;
+    width: 100%;
+    padding: 40px 35px;
+}
+footer h2{
+    /* Apply color and font size to h2 element in footer */
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+}
+footer div{
+    /* Add alignment to container  div in footer */
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+}
+footer a{
+    /*  */
+    color: #024e76;
 }
