@@ -75,7 +75,6 @@ footer a{
 section{
     /* Apply padding to sections */
     padding: 60px;
-    
 }
 .hero{
     /* Add background image to hero */
@@ -135,21 +134,57 @@ section{
     /* Add alignment to section what we do */
     text-align: center;
 }
-.intro h2{
-    /* Add style to section what we do */
+.section-title{
+    /* Add style to h2 in all sections */
     font-size: 55px;
     color: #024e76;
     margin-bottom: 35px;
     padding: 0 100px 20px 100px;
     border-bottom: 3px solid;
-    border-color: #fce138;
     display: inline-block;
 }
+.primary-border{
+    /* Add color to section what we do */
+    border-color: #fce138;
+}
+.secondary-border{
+    /* Add color to section what you do */
+    border-color: #39a6b2;
+}
 .intro p{
-    /* Add */
+    /* Add style to text */
     line-height: 1.7;
     color: #39a6b2;
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
+}
+.steps{
+    /* Add alignment and background color to section what you do */
+    text-align: center;
+    background: #fce138;
+}
+.steps div{
+    /* Add margin to steps */
+    margin-bottom: 80px;
+}
+.steps img{
+    /* Add style to image */
+    width: 15%;
+    margin: 10px 0;
+}
+.steps h3{
+    /* Add style to title */
+    color: #024e76;
+    font-size: 46px;
+    margin-top: 10px;
+}
+.steps p {
+    /* Add color and size to paragraph */
+    color: #39a6b2;
+    font-size: 23px;
+}
+.steps span{
+    /**/
+    font-size: 38px;
 }
