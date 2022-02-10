@@ -12,3 +12,5 @@ https://vicengs.github.io/Run-Buddy/
 
 ## Contribution
 Made with ❤️ by Vicente Garcia Sepulveda
+
+### ©️2019 Run Buddy, Inc
