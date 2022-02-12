@@ -3,13 +3,17 @@
 /* File     : index.html     */
 /* Author   : Vicente Garcia */
 /* Date     : 02/03/2022     */
-/* Modified : 02/08/2022     */
+/* Modified : 02/11/2022     */
 /* ------------------------- */
 *{
     /* Apply margin to whole page */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Add space and justify content of the flexbox */
+    justify-content: space-between;
+    /* Add wrap to move other line when resizes */
+    flex-wrap: wrap;
 }
 body{
     /* Apply font and color to body */
@@ -21,6 +25,8 @@ header{
     /* Apply space and background color to header */
     padding: 20px 35px;
     background-color: #39a6b2;
+    /* Add flexbox */
+    display: flex;
 }
 header h1{
     /* Apply font, color and alignment to h1 in header */
@@ -28,7 +34,7 @@ header h1{
     font-size: 36px;
     color: #fce138;
     margin: 0;
-    display: inline;
+    /* display: inline; */ /* Remove to replace with flexbox*/
 }
 header a{
     /* Apply shape and color to anchors */
@@ -37,7 +43,7 @@ header a{
 }
 header nav{
     /* Apply style to navigation */
-    float: right;
+    /* float: right; */ /* Remove to replace with flexbox*/
     margin: 7px 0;
 }
 header nav ul li{
