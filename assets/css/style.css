@@ -214,30 +214,73 @@ section{
     /*text-align: center;*/ /* Remove to replace with flexbox */
     background: #fce138;
 }
-.steps div{
-    /* Add margin to steps */
-    margin-bottom: 80px;
+/* Add class step to flexbox */
+.step{
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
-.steps img{
-    /* Add style to image */
+/* Delete rule to apply flexbox instead of box content */
+/*.steps div{
+    /* Add margin to steps -/
+    margin-bottom: 80px;
+}*/
+/* Delete rule to apply flexbox instead of box content */
+/*.steps img{
+    /* Add style to image -/
     width: 15%;
     margin: 10px 0;
-}
-.steps h3{
+}*/
+/* Rename selector from steps to step */
+.step h3{
     /* Add style to title */
     color: #024e76;
     font-size: 46px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/ /* Remove to replace with flexbox */
+    /* Add style to flexbox */
+    flex: 1 30%;
 }
-.steps p {
+/* Add class step-info to flexbox */
+.step-info{
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* Add class step-img to flexbox */
+.step-img{
+    flex: 1 12%;
+    margin-right: 20px;
+}
+/* Add class step-img to img in flexbox */
+.step-img img{
+    max-width: 100%;
+}
+/* Add class step-text to flexbox */
+.step-text{
+    flex: 12;
+}
+/* Change class from steps to step-text  */
+.step-text p {
     /* Add color and size to paragraph */
     color: #39a6b2;
-    font-size: 23px;
+    font-size: 18px; /*23px;*/
 }
-.steps span{
-    /* Add size to font to next text in title */
+.step-text h4{
+    font-size: 26px;
+    line-height: 1.5;
+    color: #024e76;
+}
+/* Delete rule to apply flexbox instead of box content */
+/*.steps span{
+    /* Add size to font to next text in title -/
     font-size: 38px;
-}
+}*/
 .trainers{
     /* Add alignment to section trainers */
     /*text-align: center;*/ /* Remove to replace with flexbox */
