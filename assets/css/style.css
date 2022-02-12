@@ -188,7 +188,7 @@ section{
     /* Add declarations to flexbox */
     padding-bottom: 20px;
     text-align: center;
-    margin: o auto 35px auto;
+    margin: 0 auto 35px auto;
     width: 50%;
 }
 .primary-border{
@@ -345,22 +345,33 @@ section{
     /*text-align: center;*/ /* Remove to replace with flexbox */
     background: #024e76;
 }
+/* Add flexbox to contact info */
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* Add flexbox to contact info>* */
+.contact-info > *{
+    flex: 1;
+    margin: 15px;
+}
 .contact h2{
     /* Add color to contact title */
     color: #fce138;
 }
 .contact-info iframe{
     /* Size map */
-    width: 400px;
+    /*width: 400px;*/ /* Remove to replace with flexbox */
     height: 400px;
 }
 .contact-info div{
     /* Add style to contact */
-    width: 410px;
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    margin: 30px 0 0 60px;
+    /*width: 410px;*/ /* Remove to replace with flexbox */
+    /*display: inline-block;*/ /* Remove to replace with flexbox */
+    /*vertical-align: top;*/ /* Remove to replace with flexbox */
+    /*text-align: left;*/ /* Remove to replace with flexbox */
+    /*margin: 30px 0 0 60px;*/ /* Remove to replace with flexbox */
     color: white;
 }
 .contact-info h3{
@@ -372,10 +383,31 @@ section{
     /* Add style to paragraph and contact info */
     margin: 20px 0;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 16px; /*20px;*/
     font-style: normal;
 }
 .contact-info a{
     /* Color to email */
     color: #fce138;
+}
+/* Add rule to contact in flexbox */
+.contact-form input, .contact-form textarea{
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+/* Add rule to contact button in flexbox */
+.contact-form button{
+    width: 100%;
+    border: none;
+    background:#fce138;
+    color: #024e76;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
 }
