@@ -43,7 +43,7 @@ header a{
 }
 header nav{
     /* Apply style to navigation */
-    /* float: right; */ /* Remove to replace with flexbox*/
+    /*float: right;*/ /* Remove to replace with flexbox */
     margin: 7px 0;
 }
 /* Delete rule to apply flexbox instead of box content */
@@ -70,17 +70,21 @@ footer{
     background: #fce138;
     width: 100%;
     padding: 40px 35px;
+    /* Add flexbox */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 footer h2{
     /* Apply color and font size to h2 element in footer */
-    display: inline;
+    /*display: inline;*/ /* Remove to replace with flexbox */
     color: #024e76;
     font-size: 30px;
     margin: 0;
 }
 footer div{
     /* Add alignment to container  div in footer */
-    float: right;
+    /*float: right;*/ /* Remove to replace with flexbox */
     line-height: 1.5;
     text-align: right;
 }
@@ -95,25 +99,47 @@ section{
 .hero{
     /* Add background image to hero */
     background-image: url("../images/hero-bg.jpg");
-    height: 600px;
+    /*height: 600px;*/ /* Remove to replace with flexbox */
     background-position: center;
     background-size: cover;
-    position: relative;
+    /*position: relative;*/ /* Remove to replace with flexbox */
+    /* Add flexbox */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .hero-form{
     /* Add style to form */
     color: #024e76;
     background-color: #fce138;
     padding: 20px;
-    width: 500px;
+    /*width: 500px;*/ /* Remove to replace with flexbox */
     /* Add style to margin */
     border-style: solid;
     border-width: 3px;
     border-color: #024e76;
     /* Position of the form */
-    position: absolute;
-    bottom: 120px;
-    right: 140px;
+    /*position: absolute;*/ /* Remove to replace with flexbox */
+    /*bottom: 120px;*/ /* Remove to replace with flexbox */
+    /*right: 140px;*/ /* Remove to replace with flexbox */
+    /* Add width and margin to flexbox */
+    width: 40%;
+    margin: 3.5%;
+}
+/* Add style to class of flexbox */
+.hero-cta{
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.3;
+}
+/* Add style to h2 of flexbox */
+.hero-cta h2{
+    font-style: italic;
+    font-size: 55px;
+    color: #fce138;
 }
 .hero-form h3{
     /* Add style to title in form */
