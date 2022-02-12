@@ -46,15 +46,24 @@ header nav{
     /* float: right; */ /* Remove to replace with flexbox*/
     margin: 7px 0;
 }
-header nav ul li{
-    /* Apply alignment to header's elements */
+/* Delete rule to apply flexbox instead of box content */
+/*header nav ul li{
+    /* Apply alignment to header's elements -/
     display: inline;
+}*/
+/* Add new rule to flexbox */
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 header nav ul li a{
     /* Apply space and shape font to navigation's elements */
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.55vw; /* Modify 22px to 1.55vw to flexbox */
 }
 footer{
     /* Apply background color and alignment to footer */
