@@ -172,18 +172,24 @@ section{
     padding: 10px 20px;
     font-size: 16px;
 }
-.intro{
-    /* Add alignment to section what we do */
+/* Delete rule to apply flexbox instead of box content */
+/*.intro{
+    /* Add alignment to section what we do -/
     text-align: center;
-}
+}*/
 .section-title{
     /* Add style to h2 in all sections */
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
+    /*margin-bottom: 35px;*/ /* Remove to replace with flexbox */
+    /*padding: 0 100px 20px 100px;*/ /* Remove to replace with flexbox */
     border-bottom: 3px solid;
-    display: inline-block;
+    /*display: inline-block;*/ /* Remove to replace with flexbox */
+    /* Add declarations to flexbox */
+    padding-bottom: 20px;
+    text-align: center;
+    margin: o auto 35px auto;
+    width: 50%;
 }
 .primary-border{
     /* Add line color to section what we do */
@@ -200,10 +206,12 @@ section{
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
+    /* Add to flexbox */
+    text-align: center;
 }
 .steps{
     /* Add alignment and background color to section what you do */
-    text-align: center;
+    /*text-align: center;*/ /* Remove to replace with flexbox */
     background: #fce138;
 }
 .steps div{
@@ -232,7 +240,7 @@ section{
 }
 .trainers{
     /* Add alignment to section trainers */
-    text-align: center;
+    /*text-align: center;*/ /* Remove to replace with flexbox */
 }
 .trainer{
     /* Add style to each trainer */
@@ -277,9 +285,13 @@ section{
     /* Alignment to right */
     text-align: right;
 }
+/* Add style to class flex-row */
+.flex-row{
+    display: flex;
+}
 .contact{
     /* Alignment contact section */
-    text-align: center;
+    /*text-align: center;*/ /* Remove to replace with flexbox */
     background: #024e76;
 }
 .contact h2{
