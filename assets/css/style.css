@@ -3,7 +3,7 @@
 /* File     : index.html     */
 /* Author   : Vicente Garcia */
 /* Date     : 02/03/2022     */
-/* Modified : 02/11/2022     */
+/* Modified : 02/12/2022     */
 /* ------------------------- */
 *{
     /* Apply margin to whole page */
@@ -61,7 +61,8 @@ header nav ul{
 }
 header nav ul li a{
     /* Apply space and shape font to navigation's elements */
-    margin: 0 30px;
+    /*margin: 0 30px;*/ /* Replace to mobile */
+    padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw; /* Modify 22px to 1.55vw to flexbox */
 }
@@ -107,6 +108,8 @@ section{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    /* Mobile */
+    align-items: flex-start;
 }
 .hero-form{
     /* Add style to form */
@@ -133,7 +136,7 @@ section{
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.2; /*1.3;*/
 }
 /* Add style to h2 of flexbox */
 .hero-cta h2{
@@ -179,7 +182,7 @@ section{
 }*/
 .section-title{
     /* Add style to h2 in all sections */
-    font-size: 55px;
+    font-size: 48px; /*55px;*/
     color: #024e76;
     /*margin-bottom: 35px;*/ /* Remove to replace with flexbox */
     /*padding: 0 100px 20px 100px;*/ /* Remove to replace with flexbox */
@@ -410,4 +413,22 @@ section{
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+}
+/* Media Query for smaller desktop screens and smaller */
+@media screen and (max-width: 980px){
+    header h1 a{
+        
+    }
+}
+/* Media Query for tablets and smaller */
+@media screen and (max-width: 768px) {
+    header h1{
+        
+    }
+}
+/* Media Query for mobile phones and smaller */
+@media screen and (max-width: 575px) {
+    header h1{
+        
+    }
 }
