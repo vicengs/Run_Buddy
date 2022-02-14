@@ -5,6 +5,12 @@
 /* Date     : 02/03/2022     */
 /* Modified : 02/12/2022     */
 /* ------------------------- */
+/* Variables */
+:root{
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+}
 *{
     /* Apply margin to whole page */
     margin: 0;
@@ -17,14 +23,14 @@
 }
 body{
     /* Apply font and color to body */
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-family: Helvetica, Arial, sans-serif;
     /*background-color: tomato;*/
 }
 header{
     /* Apply space and background color to header */
     padding: 20px 35px;
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
     /* Add flexbox */
     display: flex;
     /* Add sticky for Safari */
@@ -38,13 +44,14 @@ header{
     background-size: cover;
     /* Fix header image */
     background-attachment: fixed;
-
+    /* Fix scrolling checkbox and radio */
+    z-index: 9999;
 }
 header h1{
     /* Apply font, color and alignment to h1 in header */
     font-weight: bold;
     font-size: 36px;
-    color: #fce138;
+    color: var(--primary-color);
     margin: 0;
     /* display: inline; */ /* Remove to replace with flexbox*/
     /* Add shadow transparency */
@@ -53,7 +60,7 @@ header h1{
 header a{
     /* Apply shape and color to anchors */
     text-decoration: none;
-    color: #fce138;
+    color: var(--primary-color);
 }
 header nav{
     /* Apply style to navigation */
@@ -84,14 +91,14 @@ header nav ul li a{
 }
 /* Add pseudo-class */
 header nav ul li a:hover{
-    background: #fce138;
-    color: #024e76;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 15px;
     text-shadow: none;
 }
 footer{
     /* Apply background color and alignment to footer */
-    background: #fce138;
+    background: var(--primary-color);
     width: 100%;
     padding: 40px 35px;
     /* Add flexbox */
@@ -102,7 +109,7 @@ footer{
 footer h2{
     /* Apply color and font size to h2 element in footer */
     /*display: inline;*/ /* Remove to replace with flexbox */
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 30px;
     margin: 0;
 }
@@ -114,7 +121,7 @@ footer div{
 }
 footer a{
     /* Apply color to anchors in footer */
-    color: #024e76;
+    color: var(--secondary-color);
 }
 section{
     /* Apply padding to sections */
@@ -138,7 +145,7 @@ section{
 }
 .hero-form{
     /* Add style to form */
-    color: #024e76;
+    color: var(--secondary-color);
     /* Change background to color transparency */
     /*background-color: #fce138;*/
     background-color: rgba(252, 225, 56, 0.8);
@@ -147,7 +154,7 @@ section{
     /* Add style to margin */
     border-style: solid;
     border-width: 3px;
-    border-color: #024e76;
+    border-color: var(--secondary-color);
     /* Position of the form */
     /*position: absolute;*/ /* Remove to replace with flexbox */
     /*bottom: 120px;*/ /* Remove to replace with flexbox */
@@ -173,7 +180,7 @@ section{
 .hero-cta h2{
     font-style: italic;
     font-size: 55px;
-    color: #fce138;
+    color: var(--primary-color);
     /* Add shadow transparency */
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -188,11 +195,11 @@ section{
 }
 .form-input{
     /* Add style to form */
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     /* Add rounded corners and transparent area */
@@ -210,8 +217,8 @@ section{
 }
 .hero-form button{
     /* Add style to button */
-    color: #fce138;
-    background-color: #024e76;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -220,7 +227,60 @@ section{
 }
 /* Add pseudo-class */
 .hero-form button:hover{
-    background-color: #39a6b2;
+    background-color: var(--tertiary-color);
+}
+/* Add wrap to radio button and checkbox */
+.checkbox-wrapper input, .radio-wrapper input{
+    opacity: 0;
+}
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after{
+    content: none;
+}
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after{
+    content: "";
+}
+/* Add wrap to labels in radio button and checkbox */
+.checkbox-wrapper label, .radio-wrapper label{
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+/* Add pseudo elements for buttons */
+.checkbox-wrapper label::before, .radio-wrapper label::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+.radio-wrapper label::before{
+    border-radius: 50%;
+}
+.radio-wrapper label::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+.checkbox-wrapper label::after{
+    content: "";
+    height: 6px;
+    width: 14px;
+    border-left: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    position: absolute;
+    left: -26px;
+    top: 1px;
+    transform: rotate(-58deg);
 }
 /* Delete rule to apply flexbox instead of box content */
 /*.intro{
@@ -230,7 +290,7 @@ section{
 .section-title{
     /* Add style to h2 in all sections */
     font-size: 48px; /*55px;*/
-    color: #024e76;
+    color: var(--secondary-color);
     /*margin-bottom: 35px;*/ /* Remove to replace with flexbox */
     /*padding: 0 100px 20px 100px;*/ /* Remove to replace with flexbox */
     border-bottom: 3px solid;
@@ -243,16 +303,16 @@ section{
 }
 .primary-border{
     /* Add line color to section what we do */
-    border-color: #fce138;
+    border-color: var(--primary-color);
 }
 .secondary-border{
     /* Add line color to section what you do */
-    border-color: #39a6b2;
+    border-color: var(--tertiary-color);
 }
 .intro p{
     /* Add style to text */
     line-height: 1.7;
-    color: #39a6b2;
+    color: var(--tertiary-color);
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
@@ -262,7 +322,7 @@ section{
 .steps{
     /* Add alignment and background color to section what you do */
     /*text-align: center;*/ /* Remove to replace with flexbox */
-    background: #fce138;
+    background: var(--primary-color);
 }
 /* Add class step to flexbox */
 .step{
@@ -276,7 +336,7 @@ section{
     justify-content: space-between;
 }
 .step:not(:last-child){
-    border-bottom: 1px solid #39a6b2;
+    border-bottom: 1px solid var(--tertiary-color);
 }
 /* Delete rule to apply flexbox instead of box content */
 /*.steps div{
@@ -292,7 +352,7 @@ section{
 /* Rename selector from steps to step */
 .step h3{
     /* Add style to title */
-    color: #024e76;
+    color: var(--secondary-color);
     font-size: 46px;
     /*margin-top: 10px;*/ /* Remove to replace with flexbox */
     /* Add style to flexbox */
@@ -321,13 +381,13 @@ section{
 /* Change class from steps to step-text  */
 .step-text p {
     /* Add color and size to paragraph */
-    color: #39a6b2;
+    color: var(--tertiary-color);
     font-size: 18px; /*23px;*/
 }
 .step-text h4{
     font-size: 26px;
     line-height: 1.5;
-    color: #024e76;
+    color: var(--secondary-color);
 }
 /* Delete rule to apply flexbox instead of box content */
 /*.steps span{
@@ -348,8 +408,8 @@ section{
     /* Add style to each trainer */
     /*width: 900px;*/ /* Remove to replace with flexbox */
     margin: 20px; /*0 auto 30px auto;*/
-    background: #024e76;
-    color: #fce138;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     /*overflow: auto;*/ /* Remove to replace with flexbox */
     flex: 1;
 }
@@ -396,7 +456,7 @@ section{
 .contact{
     /* Alignment contact section */
     /*text-align: center;*/ /* Remove to replace with flexbox */
-    background: #024e76;
+    background: var(--secondary-color);
 }
 /* Add flexbox to contact info */
 .contact-info{
@@ -411,7 +471,7 @@ section{
 }
 .contact h2{
     /* Add color to contact title */
-    color: #fce138;
+    color: var(--primary-color);
 }
 .contact-info iframe{
     /* Size map */
@@ -429,7 +489,7 @@ section{
 }
 .contact-info h3{
     /* Add font and color to title */
-    color: #fce138;
+    color: var(--primary-color);
     font-size: 32px;
 }
 .contact-info p, .contact-info address{
@@ -441,15 +501,15 @@ section{
 }
 .contact-info a{
     /* Color to email */
-    color: #fce138;
+    color: var(--primary-color);
 }
 /* Add rule to contact in flexbox */
 .contact-form input, .contact-form textarea{
-    border: 1px solid #024e76;
+    border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: #024e76;
+    color: var(--secondary-color);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -466,8 +526,8 @@ section{
 .contact-form button{
     width: 100%;
     border: none;
-    background:#fce138;
-    color: #024e76;
+    background:var(--primary-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
@@ -476,8 +536,8 @@ section{
 }
 /* Add pseudo-class */
 .contact-form button:hover{
-    color: #fce138;
-    background: #39a6b2;
+    color: var(--primary-color);
+    background: var(--tertiary-color);
 }
 /* Media Query for smaller desktop screens and smaller */
 @media screen and (max-width: 980px){

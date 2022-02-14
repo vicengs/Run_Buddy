@@ -18,7 +18,7 @@
         <!-- Navigation -->
         <header>
             <!-- Go on Click to Topmost Directory-->
-            <h1><a href="./index.html">RUN BUDDY</a></h1>
+            <h1><a href="#">RUN BUDDY</a></h1>
             <!-- Accesibility & Navigation Links -->
             <nav>
                 <ul>
@@ -53,17 +53,26 @@
                     <p>
                         <!-- Add radio button -->
                         Have you worked out with a trainer before?
-                        <!-- Add Yes option -->
-                        <input type="radio" name="trainer-confirm" id="trainer-yes" />
-                        <label for="trainer-yes">Yes</label>
-                        <!-- Add No option -->
-                        <input type="radio" name="trainer-confirm" id="trainer-no" />
-                        <label for="trainer-no">No</label>
+                        <!-- Add span with class -->
+                        <span class="radio-wrapper">
+                            <!-- Add Yes option -->
+                            <input type="radio" name="trainer-confirm" id="trainer-yes" />
+                            <label for="trainer-yes">Yes</label>
+                        </span>
+                        <!-- Add span with class -->
+                        <span class="radio-wrapper">
+                            <!-- Add No option -->
+                            <input type="radio" name="trainer-confirm" id="trainer-no" />
+                            <label for="trainer-no">No</label>
+                        </span>
                     </p>
                     <p>
-                        <!-- Add checkbow to confirm age over 17 -->
-                        <label for="checkbox">I acknowledge that I am at least 18 years of age.</label>
-                        <input type="checkbox" name="age-confirm" id="checkbox" />
+                        <!-- Add span with class -->
+                        <span class="checkbox-wrapper">
+                            <!-- Add checkbow to confirm age over 17 -->
+                            <input type="checkbox" name="age-confirm" id="checkbox" />
+                            <label for="checkbox">I acknowledge that I am at least 18 years of age.</label>
+                        </span>
                     </p>
                     <!-- Add submit button -->
                     <button type="submit">Get running!</button>
